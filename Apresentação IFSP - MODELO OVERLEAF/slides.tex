@@ -1,0 +1,123 @@
+\documentclass[xcolor={table}]{beamer}
+%\usetheme{Lapesd}
+\usepackage{beamerthemeLapesd}
+
+\usepackage[brazil]{babel}	% coloca as coisas em portugues no sumário.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\usepackage{amsthm}
+\usepackage{ragged2e}
+\usepackage{subfig}
+\usepackage[table]{xcolor}
+\usepackage{ctable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fancyvrb}
+\usepackage{verbatim}
+
+\definecolor{mapOrange}{rgb}{255,230,204}
+
+
+
+\graphicspath{{fig/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,.png,.gif}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\renewcommand{\footnotesize}{\tiny}
+
+\newcommand{\Tsup}[1]{%
+  \texorpdfstring{\textsuperscript{#1}}{}%
+}
+
+\newcommand{\mymacro}[1]{#1}
+
+\addtobeamertemplate{block begin}{}{\justifying}
+
+\captionsetup{labelformat=simple}
+\captionsetup[table]{belowskip=0pt}
+
+\title[EVENTO]
+{\textbf{Titulo da Apresentação}}
+
+%author[ABREVIATURA]{NOME COMPLETO}
+\author[NOME ABREVIADO]{NOME COMPLETO}
+\date{30/07/2020}
+\institute{SETOR \\ IFSP\\
+\\
+\url{}}
+
+%================================%================================
+%================================%================================
+\begin{document}
+
+\begingroup
+\makeatletter
+\setlength{\hoffset}{-.5\beamer@sidebarwidth}
+\makeatother
+\begin{frame}[plain,t,noframenumbering]
+    
+    \titlepage
+   
+\end{frame}
+\endgroup
+%================================
+
+\begin{frame}\frametitle{Sumário}
+\tableofcontents
+\end{frame}
+
+%================================
+\section{TITULO}
+\begin{frame}[noframenumbering]\frametitle{Sumário}
+\tableofcontents[currentsection]
+\end{frame}
+%\begin{frame}{O que monitorar?}
+%\end{frame}
+%================================
+\subsection{Tópico 1}
+\begin{frame}{Tópico 1}
+    \item item 1
+    \item item 2
+\end{frame}
+%================================
+\subsection{Tópico 2}
+\begin{frame}{Tópico 2}
+    \item item 1
+    \item item 2
+\end{frame}
+%================================
+\subsection{Tópico 3}
+\begin{frame}{Tópico 3}
+    \item item 1
+    \item item 2
+\end{frame}
+%================================
+
+%================================
+\section{EXEMPLO}
+\begin{frame}{FIGURA}
+\begin{figure}[h!]
+    \includegraphics[width=0.4\textwidth, trim=0cm 0cm 0cm 0cm]{fig/Logomarca_IFSP.jpg}
+   %\caption{\centering TEXTO Fonte: [1].}
+    \end{figure}
+\end{frame}
+%================================
+\section{Duvidas}
+\begin{frame}{Perguntas?}
+\end{frame}
+
+%================================
+
+%================================
+\begin{frame}{Referências}
+	\def\newblock{}
+	\bibliographystyle{plain}
+	\bibliography{referencias}
+\end{frame}
+%================================
+
+\end{document}
