@@ -4,6 +4,6 @@
 ## Colaboradores:
  - Luiz Quirino <luizfpq@gmail.com>
 
-## Referencias:
+## Referências:
  - https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes
  - https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx
