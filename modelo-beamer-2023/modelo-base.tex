@@ -23,316 +23,295 @@
 
 \begin{frame}
 
-This template is a based on \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} from \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} and its derivation \hrefcol{https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes}{Beamer-LaTeX-Themes} from Liu Qilong
+      This template is a based on \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} from \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} and its derivation \hrefcol{https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes}{Beamer-LaTeX-Themes} from Liu Qilong
 
-\vspace{\baselineskip}
+      \vspace{\baselineskip}
 
-In the following you find a brief introduction on how to use \LaTeX\ and the beamer package to prepare slides, based on the one written by \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} for \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation}
+      In the following you find a brief introduction on how to use \LaTeX\ and the beamer package to prepare slides, based on the one written by \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} for \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation}
 
-% This template is released under \hrefcol{https://creativecommons.org/licenses/by-nc/4.0/legalcode}{Creative Commons CC BY 4.0} license
+      % This template is released under \hrefcol{https://creativecommons.org/licenses/by-nc/4.0/legalcode}{Creative Commons CC BY 4.0} license
 
 \end{frame}
 
 \section{Introdução}
 
-\begin{frame}{Beamer for SINTEF slides}
-\begin{itemize}
-\item We assume you can use \LaTeX; if you cannot,
-\hrefcol{http://en.wikibooks.org/wiki/LaTeX/}{you can learn it here}
-\item Beamer is one of the most popular and powerful document
-classes for presentations in \LaTeX
-\item Beamer has also a detailed
-\hrefcol{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{user
- manual}
-\item Here we will present only the most basic features to get you up to speed
-\end{itemize}
+\begin{frame}{Beamer para os slides SINTEF}
+      \begin{itemize}
+            \item Nós assumimos que você sabe usar \LaTeX; se você não sabe,
+                  \hrefcol{http://en.wikibooks.org/wiki/LaTeX/}{você pode aprender aqui}
+            \item Beamer é uma das classes de documentos mais populares e poderosas para apresentações em \LaTeX
+            \item Beamer também possui um detalhado
+                  \hrefcol{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{manual do usuário}
+            \item Aqui apresentaremos apenas as funcionalidades mais básicas para que você possa começar rapidamente
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Beamer vs. PowerPoint}
-Compared to PowerPoint, using \LaTeX\ is better because:
-\begin{itemize}
-\item It is not What-You-See-Is-What-You-Get, but
-What-You-\emph{Mean}-Is-What-You-Get:\\
-you write the content, the computer does the typesetting
-\item Produces a \texttt{pdf}: no problems with fonts, formulas,
-      program versions
-\item Easier to keep consistent style, fonts, highlighting, etc.
-\item Math typesetting in \TeX\ is the best:
-\begin{equation*}
-\mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) =
--\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t)
-+ V(\mathbf{r})\Psi(\mathbf{r},t)
-\end{equation*}
+      Comparado ao PowerPoint, usar \LaTeX\ é melhor porque:
 
-\end{itemize}
+      \begin{itemize}
+            \item Não é o modelo \emph{What-You-See-Is-What-You-Get} (O que você vê é o que você obtém), mas sim \emph{What-You-\emph{Mean}-Is-What-You-Get} (O que você quer dizer é o que você obtém):
+                  Você escreve o conteúdo, o computador faz a composição tipográfica.
+
+            \item Produz um \texttt{pdf}: sem problemas com fontes, fórmulas, versões do programa.
+
+            \item É mais fácil manter um estilo consistente, fontes, realces, etc.
+
+            \item A composição matemática no \TeX\ é a melhor:
+                  \begin{equation*}
+                        \mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) =
+                        -\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t)
+                        + V(\mathbf{r})\Psi(\mathbf{r},t)
+                  \end{equation*}
+      \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Getting Started}
-\framesubtitle{Selecting the SINTEF Theme}
-To start working with \texttt{sintefbeamer}, start a \LaTeX\ document with the
-preamble:
-\begin{block}{Minimum SINTEF Beamer Document}
-\verb|\documentclass{beamer}|\\
-\verb|\usetheme{sintef}|\\
-\verb|\begin{document}|\\
-\verb|\begin{frame}{Hello, world!}|\\
-\verb|\end{frame}|\\
-\verb|\end{document}|\\
-\end{block}
+\begin{frame}[fragile]{Primeiros Passos}
+      \framesubtitle{Selecionando o Tema SINTEF}
+      Para começar a trabalhar com o \texttt{sintefbeamer}, inicie um documento \LaTeX\ com o preâmbulo:
+      \begin{block}{Documento Mínimo do Beamer SINTEF}
+            \verb|\documentclass{beamer}|\\
+            \verb|\usetheme{sintef}|\\
+            \verb|\begin{document}|\\
+            \verb|\begin{frame}{Olá, mundo!}|\\
+            \verb|\end{frame}|\\
+            \verb|\end{document}|\\
+      \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Title page}
-To set a typical title page, you call some commands in the preamble:
-\begin{block}{The Commands for the Title Page}
-\begin{verbatim}
-\title{Sample Title}
-\subtitle{Sample subtitle}
-\author{First Author, Second Author}
-\date{\today} % Can also be (ab)used for conference name &c.
-\end{verbatim}
-\end{block}
-You can then write out the title page with \verb|\maketitle|.
+\begin{frame}[fragile]{Página de Título}
+      Para configurar uma típica página de título, você deve chamar alguns comandos no preâmbulo:
+      \begin{block}{Os Comandos para a Página de Título}
+            \begin{verbatim}
+      \title{Título de Exemplo}
+      \subtitle{Subtítulo de Exemplo}
+      \author{Primeiro Autor, Segundo Autor}
+      \date{\today}
+      \end{verbatim}
+      \end{block}
 
-To set a \textbf{background image} use the \verb|\titlebackground| command 
-before \verb|\maketitle|; its only argument is the name (or path) of a graphic 
-file.
+      Você pode então escrever a página de título com o comando \verb|\maketitle|.
 
-If you use the \textbf{starred version} \verb|\titlebackground*|, the image 
-will be clipped to a split view on the right side of the title slide.
+      Para definir uma \textbf{imagem de fundo}, use o comando \verb|\titlebackground| antes de \verb|\maketitle|; seu único argumento é o nome (ou caminho) de um arquivo gráfico.
+
+      Se você usar a versão \textbf{com estrela} \verb|\titlebackground*|, a imagem será recortada para exibição na metade direita do slide de título.
 
 \end{frame}
 
-\begin{frame}[fragile]{Writing a Simple Slide}
-\framesubtitle{It's really easy!}
-\begin{itemize}[<+->]
-\item A typical slide has bulleted lists
-\item These can be uncovered in sequence
-\end{itemize}
-\begin{block}{Code for a Page with an Itemised List}<+->
-\begin{verbatim}
-\begin{frame}{Writing a Simple Slide}
-  \framesubtitle{It's really easy!}
-  \begin{itemize}[<+->]
-    \item A typical slide has bulleted lists
-    \item These can be uncovered in sequence
-  \end{itemize}\end{frame}
-\end{verbatim}
-\end{block}
+\begin{frame}[fragile]{Escrevendo um Slide Simples}
+      \framesubtitle{É realmente fácil!}
+      \begin{itemize}[<+->]
+            \item Um slide típico contém listas com marcadores.
+            \item Essas listas podem ser reveladas sequencialmente.
+      \end{itemize}
+      \begin{block}{Código para uma Página com uma Lista Enumerada}<+->
+            \begin{verbatim}
+            \begin{frame}{Escrevendo um Slide Simples}
+            \framesubtitle{É realmente fácil!}
+            \begin{itemize}[<+->]
+            \item Um slide típico contém listas com marcadores.
+            \item Essas listas podem ser reveladas sequencialmente.
+            \end{itemize}\end{frame}
+            \end{verbatim}
+      \end{block}
 \end{frame}
 
-\section{Personalization}
+\section{Personalização}
 
 \footlinecolor{sintefyellow}
-\begin{frame}[fragile]{Changing Slide Style}
-\begin{itemize}
-\item You can select the white or \textit{maincolor} \textbf{slide style} \emph{in the 
-preamble} with \verb|\themecolor{white}| (default) or \verb|\themecolor{main}|
+\begin{frame}[fragile]{Alterando o Estilo do Slide}
       \begin{itemize}
-      \item You should \emph{not} change these within the document: Beamer does 
-      not like it
-      \item If you \emph{really} must, you may have to add 
-      \verb|\usebeamercolor[fg]{normal text}| in the slide
+            \item Você pode selecionar o \textbf{estilo do slide} em branco ou \textit{maincolor} \emph{no preâmbulo} com \verb|\themecolor{white}| (padrão) ou \verb|\themecolor{main}|
+                  \begin{itemize}
+                        \item Você \emph{não deve} mudar isso dentro do documento: o Beamer não gosta disso.
+                        \item Se você \emph{realmente} precisar, talvez seja necessário adicionar \verb|\usebeamercolor[fg]{normal text}| no slide.
+                  \end{itemize}
+            \item Você pode alterar a \textbf{cor da rodapé} (\emph{footline}) com \verb|\footlinecolor{cor}|
+                  \begin{itemize}
+                        \item Coloque o comando \emph{antes} de um novo \verb|frame|.
+                        \item Existem quatro cores "oficiais": \testcolor{maincolor}, \testcolor{sintefyellow}, \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}, \testcolor{sintefred} (add pelo quirino).
+                        \item O padrão é sem rodapé; você pode restaurá-lo com \verb|\footlinecolor{}|.
+                        \item Outras cores podem funcionar, mas não há garantias!
+                        \item Não deve ser usado com o tema \verb|maincolor|!
+                  \end{itemize}
       \end{itemize}
-\item You can change the \textbf{footline colour} with 
-\verb|\footlinecolor{color}|
-      \begin{itemize}
-      \item Place the command \emph{before} a new \verb|frame|
-      \item There are four ``official'' colors: 
-      \testcolor{maincolor}, \testcolor{sintefyellow}, 
-      \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}
-      \item Default is no footline; you can restore it with 
-      \verb|\footlinecolor{}|
-      \item Others may work, but no guarantees!
-      \item Should \emph{not} be used with the \verb|maincolor| theme!
-      \end{itemize}
-\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Blocks}
-\begin{columns} % adding [onlytextwidth] the left margins will be set correctly
-\begin{column}{0.3\textwidth}
-\begin{block}{Standard Blocks}
-These have a color coordinated with the footline (and grey in the blue theme)
-\begin{verbatim}
-\begin{block}{title}
-content...
-\end{block}
-\end{verbatim}
-\end{block}
-\end{column}
-\begin{column}{0.7\textwidth}
-\begin{colorblock}[black]{sinteflightgreen}{Colour Blocks}
-Similar to the ones on the left, but you pick the colour. Text will be white by 
-default, but you may set it with an optional argument.
-\small
-\begin{verbatim}
-\begin{colorblock}[black]{sinteflightgreen}{title}
-content...
-\end{colorblock}
-\end{verbatim}
-\end{colorblock}
-The ``official'' colours of colour blocks are: \testcolor{sinteflilla}, 
-\testcolor{maincolor}, \testcolor{sintefdarkgreen}, and 
-\testcolor{sintefyellow}.
-\end{column}
-\end{columns}
+\begin{frame}[fragile]{Blocos}
+      \begin{columns} % adicionando [onlytextwidth], as margens esquerdas serão definidas corretamente
+            \begin{column}{0.3\textwidth}
+                  \begin{block}{Blocos Padrão}
+                        Estes têm uma cor coordenada com a rodapé (e cinza no tema azul)
+                        \begin{verbatim}
+      \begin{block}{título}
+      conteúdo...
+      \end{block}
+      \end{verbatim}
+                  \end{block}
+            \end{column}
+            \begin{column}{0.7\textwidth}
+                  \begin{exampleblock}{Blocos Coloridos}
+                        Semelhante aos do lado esquerdo, mas você escolhe a cor. O texto será branco por padrão, mas você pode definir isso com um argumento opcional.
+                        \small
+                        \begin{verbatim}
+      \begin{exampleblock}{título}
+      conteúdo...
+      \end{exampleblock}
+      \end{verbatim}
+                  \end{exampleblock}
+                  As cores "oficiais" dos blocos coloridos são: \testcolor{sinteflilla}, \testcolor{maincolor}, \testcolor{sintefdarkgreen} e \testcolor{sintefyellow}.
+            \end{column}
+      \end{columns}
 \end{frame}
+
 
 \footlinecolor{}
-\begin{frame}[fragile]{Using Colours}
-\begin{itemize}[<alert@2>]
-  \item You can use colours with the
-        \verb|\textcolor{<color name>}{text}| command
-  \item The colours are defined in the \texttt{sintefcolor} package:
-  \begin{itemize}
-  \item Primary colours: \testcolor{maincolor} and its sidekick 
-  \testcolor{sintefgrey}
-  \item Three shades of green: \testcolor{sinteflightgreen}, 
-  \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}
-  \item Additional colours: \testcolor{sintefyellow}, \testcolor{sintefred}, 
-        \testcolor{sinteflilla}
-        \begin{itemize}
-        \item These may be shaded---see the \verb|sintefcolor| documentation or 
-        the \hrefcol{https://sintef.sharepoint.com/sites/stottetjenester/%
-        kommunikasjon/grafisk-profil-new/Sider/default.aspx}{SINTEF profile 
-        manual}
-        \end{itemize}
-  \end{itemize}
-  \item Do \emph{not} abuse colours: \verb|\emph{}| is usually enough
-  \item Use \verb|\alert{}| to bring the \alert<2->{focus} somewhere
-  \item<2- | alert@2> If you highlight too much, you don't highlight at all!
-\end{itemize}
+
+\begin{frame}[fragile]{Usando Cores}
+      \begin{itemize}[<alert@2>]
+            \item Você pode usar cores com o comando \verb|\textcolor{<nome da cor>}{texto}|
+            \item As cores são definidas no pacote \texttt{sintefcolor}:
+                  \begin{itemize}
+                        \item Cores principais: \testcolor{maincolor} e sua variante \testcolor{sintefgrey}
+                        \item Três tons de verde: \testcolor{sinteflightgreen}, \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}
+                        \item Cores adicionais: \testcolor{sintefyellow}, \testcolor{sintefred}, \testcolor{sinteflilla}
+                              \begin{itemize}
+                                    \item Estas cores podem ser sombreadas --- consulte a documentação do \verb|sintefcolor| ou o \hrefcol{https://sintef.sharepoint.com/sites/stottetjenester/%
+                                                kommunikasjon/grafisk-profil-new/Sider/default.aspx}{manual de perfil da SINTEF} para mais informações.
+                              \end{itemize}
+                  \end{itemize}
+            \item Não \emph{abusar} das cores: \verb|\emph{}| geralmente é suficiente.
+            \item Use \verb|\alert{}| para \alert<2->{destacar} algum conteúdo.
+            \item<2- | alert@2> Se você destacar demais, o destaque perde o efeito!
+      \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Adding images}
-\begin{columns}  % adding [onlytextwidth] the left margins will be set correctly
-\begin{column}{0.7\textwidth}
-Adding images works like in normal \LaTeX:
-\begin{block}{Code for Adding Images}
-\begin{verbatim}
-\usepackage{graphicx}
-% ...
-\includegraphics[width=\textwidth]
-{assets/logo_RGB}
-\end{verbatim}
-\end{block}
-\end{column}
-\begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]
-{assets/logo_RGB}
-\end{column}
-\end{columns}
+
+
+\begin{frame}[fragile]{Adicionando Imagens}
+      \begin{columns} % adicionando [onlytextwidth], as margens esquerdas serão definidas corretamente
+            \begin{column}{0.7\textwidth}
+                  Adicionar imagens funciona como no \LaTeX\ normal:
+                  \begin{block}{Código para Adicionar Imagens}
+                        \begin{verbatim}
+            \usepackage{graphicx}
+            % ...
+            \includegraphics[width=\textwidth]
+            {assets/logo_RGB}
+            \end{verbatim}
+                  \end{block}
+            \end{column}
+            \begin{column}{0.3\textwidth}
+                  \includegraphics[width=\textwidth]
+                  {assets/logo_RGB}
+            \end{column}
+      \end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{Splitting in Columns}
-Splitting the page is easy and common;
-typically, one side has a picture and the other text:
-\begin{columns}  % adding [onlytextwidth] the left margins will be set correctly
-\begin{column}{0.6\textwidth}
-This is the first column
-\end{column}
-\begin{column}{0.3\textwidth}
-And this the second
-\end{column}
-\end{columns}
-\begin{block}{Column Code}
-\begin{verbatim}
-\begin{columns}  % adding [onlytextwidth] the left margins will be set correctly
+      Dividir a página em colunas é fácil e comum;
+      Tipicamente, um lado possui uma imagem e o outro texto:
+      \begin{columns}  % adding [onlytextwidth] the left margins will be set correctly
+            \begin{column}{0.6\textwidth}
+                  Essa é a primeira coluna
+            \end{column}
+            \begin{column}{0.3\textwidth}
+                  E essa é a segunda
+            \end{column}
+      \end{columns}
+      \begin{block}{Código para colunas}
+            \begin{verbatim}
+\begin{columns}   % adicionando [onlytextwidth], as margens esquerdas serão definidas corretamente
     \begin{column}{0.6\textwidth}
-        This is the first column
+      Essa é a primeira coluna
     \end{column}
     \begin{column}{0.3\textwidth}
-        And this the second
+      E essa é a segunda
     \end{column}
-    % There could be more!
+    % Podem haver mais colunas
 \end{columns}
 \end{verbatim}
-\end{block}
+      \end{block}
 \end{frame}
 
-\begin{chapter}[assets/background_negative]{}{Special Slides}
-\begin{itemize}
-\item Chapter slides
-\item Side-picture slides
-\end{itemize}
+\begin{chapter}[assets/background_negative]{}{Slides Especiais}
+ \begin{itemize}
+       \item Slides de capítulo
+       \item Slides com imagem lateral
+ \end{itemize}
 \end{chapter}
 
 \footlinecolor{sintefred}
-\begin{frame}[fragile]{Chapter slides}
-\begin{itemize}
-\item Similar to \verb|frame|s, but with a few more options
-\item Opened with \verb|\begin{chapter}[<image>]{<color>}{<title>}|
-\item Image is optional, colour and title are mandatory
-\item There are seven ``official'' colours: \testcolor{maincolor}, 
-\testcolor{sintefdarkgreen}, \testcolor{sintefgreen}, 
-\testcolor{sinteflightgreen}, \testcolor{sintefred}, \testcolor{sintefyellow}, 
-\testcolor{sinteflilla}.
+
+\begin{frame}[fragile]{Slides de Capítulo}
       \begin{itemize}
-      \item Strangely enough, these are \emph{more} than the official colours 
-      for the footline.
-      \item It may still be a nice touch to change the footline of following 
-      slides to the same color of a chapter slide. Your choice.
+            \item Semelhantes aos slides \verb|frame|, mas com algumas opções adicionais.
+            \item Abertos com \verb|\begin{chapter}[<imagem>]{<cor>}{<título>}|.
+            \item A imagem é opcional, a cor e o título são obrigatórios.
+            \item Existem sete cores "oficiais": \testcolor{maincolor}, \testcolor{sintefdarkgreen}, \testcolor{sintefgreen}, \testcolor{sinteflightgreen}, \testcolor{sintefred}, \testcolor{sintefyellow}, \testcolor{sinteflilla}.
+                  \begin{itemize}
+                        \item Curiosamente, são \emph{mais} cores oficiais do que as cores da rodapé.
+                        \item Ainda assim, pode ser interessante combinar a cor da rodapé com a cor de um slide de capítulo. Fica a seu critério.
+                  \end{itemize}
+            \item Caso contrário, \verb|chapter| se comporta exatamente como \verb|frame|.
       \end{itemize}
-\item Otherwise, \verb|chapter| behaves just like \verb|frame|.
-\end{itemize}
 \end{frame}
 
-\begin{sidepic}{assets/background_alternative}{Side-Picture Slides}
-\begin{itemize}
-\item Opened with \texttt{$\backslash$begin\{sidepic\}\{<image>\}\{<title>\}}
-\item Otherwise, \texttt{sidepic} works just like \texttt{frame}
-\end{itemize}
+\begin{sidepic}{assets/background_alternative}{Slides com Imagem Lateral}
+      \begin{itemize}
+            \item Abertos com \texttt{$\backslash$begin{sidepic}{<imagem>}{<título>}}
+            \item Caso contrário, \texttt{sidepic} se comporta exatamente como \texttt{frame}
+      \end{itemize}
 \end{sidepic}
 
 \footlinecolor{}
 \begin{frame}
-\frametitle{Fonts}
-\begin{itemize}
-\item The paramount task of fonts is being readable
-\item There are good ones...
-  \begin{itemize}
-  \item {\textrm{Use serif fonts only with high-definition projectors}}
-  \item {\textsf{Use sans-serif fonts otherwise (or if you simply prefer 
-them)}}
-  \end{itemize}
-\item ... and not so good ones:
-  \begin{itemize}
-  \item {\texttt{Never use monospace for normal text}}
-  \item {\frakfamily Gothic, calligraphic or weird fonts: should always: be
-  avoided}
-\end{itemize}
-\end{itemize}
+      \frametitle{Fontes}
+      \begin{itemize}
+            \item A tarefa primordial das fontes é serem legíveis.
+            \item Existem fontes boas...
+                  \begin{itemize}
+                        \item {\textrm{Use fontes com serifa apenas com projetores de alta definição}}
+                        \item {\textsf{Use fontes sem serifa caso contrário (ou se você simplesmente preferir
+                                    elas)}}
+                  \end{itemize}
+            \item ... e fontes nem tão boas assim:
+                  \begin{itemize}
+                        \item {\texttt{Nunca use fonte monoespaçada para texto normal}}
+                        \item {\frakfamily Fontes góticas, caligráficas ou estranhas: devem sempre ser evitadas}
+                  \end{itemize}
+      \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Look}
-\begin{itemize}
-\item To insert a final slide with the title and final thanks, use \verb|\backmatter|.
+\begin{frame}[fragile]{Aparência}
       \begin{itemize}
-      \item The title also appears in footlines along with the author name, you can change this text with \verb|\footlinepayoff|
-      \item You can remove the title from the final slide with \verb|\backmatter[notitle]|
+            \item Para inserir um slide final com o título e agradecimentos finais, use \verb|\backmatter|.
+                  \begin{itemize}
+                        \item O título também aparece na rodapé junto com o nome do autor, você pode alterar esse texto com \verb|\footlinepayoff|.
+                        \item Você pode remover o título do slide final com \verb|\backmatter[notitle]|.
+                  \end{itemize}
+            \item A proporção de aspecto padrão é 16:9, e você não deve alterá-la para 4:3 em projetores antigos, pois é impossível converter perfeitamente uma apresentação 16:9 para 4:3; os espaçamentos \emph{serão} alterados.
+                  \begin{itemize}
+                        \item O argumento \texttt{aspectratio} da classe \texttt{beamer} é substituído pelo tema SINTEF.
+                        \item Se você \emph{realmente} sabe o que está fazendo, verifique o código do pacote e procure pela classe \texttt{geometry}.
+                  \end{itemize}
       \end{itemize}
-\item The aspect ratio defaults to 16:9, and you should not change it to 4:3
-      for old projectors as it is inherently impossible to perfectly convert a 
-      16:9 presentation to 4:3 one; spacings \emph{will} break
-      \begin{itemize}
-      \item The \texttt{aspectratio} argument to the \texttt{beamer} class is
-            overridden by the SINTEF theme
-      \item If you \emph{really} know what you are doing, check the package
-            code and look for the \texttt{geometry} class.
-      \end{itemize}
-\end{itemize}
 \end{frame}
 
-\section{Summary}
+\section{Sumário}
 
 \begin{frame}
-\frametitle{Good Luck!}
-\begin{itemize}
-\item Enough for an introduction! You should know enough by now
-\item If you have corrections or suggestions,
-\hrefcol{mailto:andrea@gasparini.cloud}{send them to me!}
-\end{itemize}
+      \frametitle{Boa Sorte!}
+      \begin{itemize}
+            \item Isso é o suficiente para uma introdução! Agora você já deve saber o bastante.
+            \item Se tiver correções ou sugestões,
+                  \hrefcol{mailto:andrea@gasparini.cloud}{envie-as para mim!}
+      \end{itemize}
 \end{frame}
+
+ % para alterar o que consta aqui, é necessário alterar os parametros em % Define backmatter 
+ % no arquivo beamerthemesintef.sty
+ % para não mostrar este slide de agradecimento final, é só remover a tag \blackmatter
 
 \backmatter
 \end{document}
